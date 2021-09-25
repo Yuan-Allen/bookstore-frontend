@@ -1,0 +1,44 @@
+.header {
+    background-color: #ae3b46;
+}
+
+.ant-menu-item-selected {
+    background-color: #ede0df !important;
+    color: #ba5d63 !important;
+}
+
+.ant-layout-sider {
+    background: none !important;
+}
+
+.ant-card-meta-description{
+    color: red !important;
+}
+
+.ant-input-search-with-button {
+    margin-top: 20px;
+    max-width: 500px;
+}
+
+.ant-list {
+    margin-top: 40px;
+}
+
+.logo {
+    height: 70px;
+}
+
+.ant-carousel .slick-slide img{
+    width: 750px;
+    height:315px;
+    background: #364d79;
+    margin: 20px auto 0;
+    position: relative;
+}
+
+.ant-carousel{
+    width: 750px;
+    height:315px;
+    margin: 0 auto;
+    text-align: center;
+}
