@@ -40,7 +40,7 @@ export class BookList extends React.Component {
     render() {
         return (
             <div>
-                <Input placeHolder={"Book Name..."} onChange={this.handleSearch} style={{marginTop: 48}}/>
+                <Input placeHolder={"Book Name..."} onChange={this.handleSearch} style={{marginTop: 16}}/>
                 <List
                     grid={{
                         gutter: 16,

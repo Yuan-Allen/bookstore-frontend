@@ -6,6 +6,7 @@ import {HeaderInfo} from "../components/HeaderInfo";
 import {BookCarousel} from "../components/BookCarousel";
 import "../css/home.css"
 import {withRouter} from "react-router-dom";
+import {VisitStatic} from "../components/VisitStatic";
 
 const {Header, Content, Footer} = Layout;
 
@@ -22,6 +23,7 @@ class HomeView extends React.Component {
                     <Content style={{padding: '16px 50px'}}>
                         <div className="home-content">
                             <BookCarousel/>
+                            <VisitStatic/>
                             <BookList/>
                         </div>
                     </Content>

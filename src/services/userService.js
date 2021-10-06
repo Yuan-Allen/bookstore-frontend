@@ -96,3 +96,8 @@ export const checkUsername = (data, callback) => {
     const url = "http://localhost:8080/checkUsername"
     postRequest_v3(url, data, callback);
 }
+
+export const getVisits = (data, callback) => {
+    const url="http://localhost:8080/visits";
+    postRequest(url, data, callback);
+}
