@@ -1,7 +1,14 @@
 import React from "react";
 import {Layout, Menu} from "antd";
 import MenuItem from "antd/es/menu/MenuItem";
-import {ReadOutlined, ShoppingCartOutlined, SendOutlined, BarChartOutlined, MessageOutlined} from "@ant-design/icons"
+import {
+    ReadOutlined,
+    ShoppingCartOutlined,
+    SendOutlined,
+    BarChartOutlined,
+    MessageOutlined,
+    SearchOutlined
+} from "@ant-design/icons"
 import {Link} from "react-router-dom"
 
 const {Sider} = Layout;
@@ -15,7 +22,7 @@ class SideBar extends React.Component {
                 >
                     <MenuItem key="1" icon={<ReadOutlined/>}>
                         <Link to="/">
-                            books
+                            Books
                         </Link>
                     </MenuItem>
                     <MenuItem key="2" icon={<ShoppingCartOutlined/>}>
@@ -36,6 +43,11 @@ class SideBar extends React.Component {
                     <MenuItem key="5" icon={<MessageOutlined />}>
                         <Link to="/chat">
                             Chat
+                        </Link>
+                    </MenuItem>
+                    <MenuItem key="6" icon={<SearchOutlined />}>
+                        <Link to="/fullTextSearch">
+                            Full Text Search
                         </Link>
                     </MenuItem>
                 </Menu>

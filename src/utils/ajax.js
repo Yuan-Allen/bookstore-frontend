@@ -47,27 +47,17 @@ let postRequest_v2 = (url, data, callback) => {
         });
 };
 
-let postRequest_v3 = (url, json, callback) => {
-
-    let opts = {
-        method: "POST",
-        body: JSON.stringify(json),
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        credentials: "include"
-    };
-
-    fetch(url,opts)
+let getRequest = (url, callback) => {
+    fetch(url)
         .then((response) => {
             return response.json()
         })
         .then((data) => {
-            return  callback(data);
+            callback(data);
         })
         .catch((error) => {
             console.log(error);
         });
 };
 
-export {postRequest, postRequest_v2, postRequest_v3};
+export {postRequest, postRequest_v2, getRequest};

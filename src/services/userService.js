@@ -1,6 +1,6 @@
 import {history} from "../utils/history";
 import {message} from "antd";
-import {postRequest, postRequest_v3} from "../utils/ajax";
+import {postRequest} from "../utils/ajax";
 
 export const login = (data) => {
     const url = `http://localhost:8080/login`;
@@ -90,11 +90,6 @@ export const getAllOrders = (data, callback) => {
 export const delOrder = (data, callback) => {
     const url = "http://localhost:8080/delOrder"
     postRequest(url, data, callback);
-}
-
-export const checkUsername = (data, callback) => {
-    const url = "http://localhost:8080/checkUsername"
-    postRequest_v3(url, data, callback);
 }
 
 export const getVisits = (data, callback) => {
