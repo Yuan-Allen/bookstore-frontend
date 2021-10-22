@@ -1,4 +1,4 @@
-import {getRequest, postRequest, postRequest_v2} from "../utils/ajax";
+import {getRequest, getRequest_returnText, postRequest, postRequest_v2} from "../utils/ajax";
 
 export const getBooks = (data, callback) => {
     const url = 'http://localhost:8080/getBooks';
@@ -29,4 +29,9 @@ export const delBook = (json, callback) => {
 export const fullTextSearch = (query, callback) => {
     const url = 'http://localhost:8080/fullTextSearching?query='+query;
     getRequest(url, callback);
+}
+
+export const searchAuthor = (bookName, callback) => {
+    const url = 'http://localhost:8080/author/'+bookName;
+    getRequest_returnText(url, callback);
 }

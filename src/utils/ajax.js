@@ -60,4 +60,19 @@ let getRequest = (url, callback) => {
         });
 };
 
-export {postRequest, postRequest_v2, getRequest};
+let getRequest_returnText = (url, callback) => {
+    fetch(url)
+        .then((response) => {
+            return response.text();
+        })
+        .then((data) => {
+            callback(data);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+};
+
+
+
+export {postRequest, postRequest_v2, getRequest, getRequest_returnText};

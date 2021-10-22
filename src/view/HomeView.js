@@ -7,6 +7,7 @@ import {BookCarousel} from "../components/BookCarousel";
 import "../css/home.css"
 import {withRouter} from "react-router-dom";
 import {VisitStatistic} from "../components/VisitStatistic";
+import {AuthorSearchTable} from "../components/AuthorSearchTable";
 
 const {Header, Content, Footer} = Layout;
 
@@ -24,6 +25,7 @@ class HomeView extends React.Component {
                         <div className="home-content">
                             <BookCarousel/>
                             <VisitStatistic/>
+                            <AuthorSearchTable/>
                             <BookList/>
                         </div>
                     </Content>
