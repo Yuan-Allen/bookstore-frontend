@@ -3,7 +3,7 @@ import {message} from "antd";
 import {postRequest} from "../utils/ajax";
 
 export const login = (data) => {
-    const url = `http://localhost:8080/login`;
+    const url = `https://localhost:8443/login`;
     const callback = (data) => {
         if (data.status >= 0) {
             sessionStorage.setItem('user', JSON.stringify(data.data));
@@ -20,7 +20,7 @@ export const login = (data) => {
 };
 
 export const register = (data) => {
-    const url = `http://localhost:8080/register`;
+    const url = `https://localhost:8443/register`;
     const callback = (data) => {
         if (data.status >= 0) {
             history.push("/login");
@@ -31,7 +31,7 @@ export const register = (data) => {
 }
 
 export const logout = () => {
-    const url = `http://localhost:8080/logout`;
+    const url = `https://localhost:8443/logout`;
 
     const callback = (data) => {
         if (data.status >= 0) {
@@ -47,52 +47,52 @@ export const logout = () => {
 
 export const getCart = (userId, callback) => {
     const data = {userId: userId};
-    const url = "http://localhost:8080/getCart";
+    const url = "https://localhost:8443/getCart";
     postRequest(url, data, callback);
 }
 
 export const addCart = (json, callback) => {
-    const url = "http://localhost:8080/addCart";
+    const url = "https://localhost:8443/addCart";
     postRequest(url, json, callback);
 }
 
 export const getOrders = (userId, callback) => {
     const data = {userId: userId};
-    const url = "http://localhost:8080/getOrders"
+    const url = "https://localhost:8443/getOrders"
     postRequest(url, data, callback);
 }
 
 export const addOrder = (data, callback) => {
-    const url = "http://localhost:8080/addOrder"
+    const url = "https://localhost:8443/addOrder"
     postRequest(url, data, callback);
 }
 
 export const deleteCartItem = (data, callback) => {
-    const url = "http://localhost:8080/delCart"
+    const url = "https://localhost:8443/delCart"
     postRequest(url, data, callback);
 }
 
 export const getUsers = (data, callback) => {
-    const url = "http://localhost:8080/getUsers"
+    const url = "https://localhost:8443/getUsers"
     postRequest(url, data, callback);
 }
 
 export const switchUserAuth = (data, callback) => {
-    const url = "http://localhost:8080/switchUserAuth"
+    const url = "https://localhost:8443/switchUserAuth"
     postRequest(url, data, callback);
 }
 
 export const getAllOrders = (data, callback) => {
-    const url = "http://localhost:8080/getAllOrders"
+    const url = "https://localhost:8443/getAllOrders"
     postRequest(url, data, callback);
 }
 
 export const delOrder = (data, callback) => {
-    const url = "http://localhost:8080/delOrder"
+    const url = "https://localhost:8443/delOrder"
     postRequest(url, data, callback);
 }
 
 export const getVisits = (data, callback) => {
-    const url="http://localhost:8080/visits";
+    const url="https://localhost:8443/visits";
     postRequest(url, data, callback);
 }
