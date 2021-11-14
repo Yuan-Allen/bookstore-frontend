@@ -15,6 +15,7 @@ import UserStatisticsView from "./view/UserStatisticsView";
 import RegisterView from "./view/RegisterView";
 import ChatView from "./view/ChatView";
 import FullTextSearchView from "./view/FullTextSearchView";
+import LabelSearchView from "./view/LabelSearchView";
 
 class BasicRoute extends React.Component{
     constructor(props) {
@@ -41,6 +42,7 @@ class BasicRoute extends React.Component{
                     <Route exact path="/register" component={RegisterView}/>
                     <Route exact path="/chat" component={ChatView}/>
                     <Route exact path="/fullTextSearch" component={FullTextSearchView}/>
+                    <Route exact path="/searchByLabel" component={LabelSearchView}/>
                     <Redirect from="/*" to="/" />
                 </Switch>
             </BrowserRouter>

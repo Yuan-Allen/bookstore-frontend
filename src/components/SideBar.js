@@ -7,7 +7,7 @@ import {
     SendOutlined,
     BarChartOutlined,
     MessageOutlined,
-    SearchOutlined
+    SearchOutlined, TagOutlined
 } from "@ant-design/icons"
 import {Link} from "react-router-dom"
 
@@ -48,6 +48,11 @@ class SideBar extends React.Component {
                     <MenuItem key="6" icon={<SearchOutlined />}>
                         <Link to="/fullTextSearch">
                             Full Text Search
+                        </Link>
+                    </MenuItem>
+                    <MenuItem key="7" icon={<TagOutlined />}>
+                        <Link to="/searchByLabel">
+                            Search With Label
                         </Link>
                     </MenuItem>
                 </Menu>

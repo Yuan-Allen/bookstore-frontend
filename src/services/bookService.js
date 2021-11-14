@@ -35,3 +35,8 @@ export const searchAuthor = (bookName, callback) => {
     const url = 'https://localhost:8443/author/'+bookName;
     getRequest_returnText(url, callback);
 }
+
+export const searchBooksByLabel = (label, callback) => {
+    const url = 'https://localhost:8443/getBooksByLabel?label='+label;
+    getRequest(url, callback);
+}
